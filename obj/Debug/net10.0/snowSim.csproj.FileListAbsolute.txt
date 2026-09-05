@@ -1,0 +1,14 @@
+C:\projects\cSharp\snowSim\bin\Debug\net10.0\snowSim.exe
+C:\projects\cSharp\snowSim\bin\Debug\net10.0\snowSim.deps.json
+C:\projects\cSharp\snowSim\bin\Debug\net10.0\snowSim.runtimeconfig.json
+C:\projects\cSharp\snowSim\bin\Debug\net10.0\snowSim.dll
+C:\projects\cSharp\snowSim\bin\Debug\net10.0\snowSim.pdb
+C:\projects\cSharp\snowSim\obj\Debug\net10.0\snowSim.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\cSharp\snowSim\obj\Debug\net10.0\snowSim.AssemblyInfoInputs.cache
+C:\projects\cSharp\snowSim\obj\Debug\net10.0\snowSim.AssemblyInfo.cs
+C:\projects\cSharp\snowSim\obj\Debug\net10.0\snowSim.csproj.CoreCompileInputs.cache
+C:\projects\cSharp\snowSim\obj\Debug\net10.0\snowSim.dll
+C:\projects\cSharp\snowSim\obj\Debug\net10.0\refint\snowSim.dll
+C:\projects\cSharp\snowSim\obj\Debug\net10.0\snowSim.pdb
+C:\projects\cSharp\snowSim\obj\Debug\net10.0\snowSim.genruntimeconfig.cache
+C:\projects\cSharp\snowSim\obj\Debug\net10.0\ref\snowSim.dll
