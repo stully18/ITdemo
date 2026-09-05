@@ -1,4 +1,6 @@
-     class Rider
+using System.Diagnostics.Tracing;
+
+abstract class Rider
     {
         public string gender = "";
         public int age;
@@ -45,6 +47,13 @@
 
             }
             
+        }
+        
+
+        public virtual void Eat()
+        {
+            health += 10;
+            System.Console.WriteLine("You ate! +10 health!");
         }
 
 
