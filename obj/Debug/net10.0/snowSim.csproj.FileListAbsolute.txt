@@ -12,3 +12,4 @@ C:\projects\cSharp\snowSim\obj\Debug\net10.0\refint\snowSim.dll
 C:\projects\cSharp\snowSim\obj\Debug\net10.0\snowSim.pdb
 C:\projects\cSharp\snowSim\obj\Debug\net10.0\snowSim.genruntimeconfig.cache
 C:\projects\cSharp\snowSim\obj\Debug\net10.0\ref\snowSim.dll
+C:\projects\cSharp\snowSim\obj\Debug\net10.0\snowSim.sourcelink.json
