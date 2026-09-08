@@ -5,7 +5,8 @@ abstract class Rider
         public string gender = "";
         public int age;
         public int yearsOfExperience;
-        protected int health = 79;
+        public int healthIncrease = 10;
+        protected int health = 100;
         private int trickDamage = 1;
         private double trickModifier = 1.1;
 
@@ -52,10 +53,13 @@ abstract class Rider
 
         public virtual void Eat()
         {
-            health += 10;
-            System.Console.WriteLine("You ate! +10 health!");
+            health += healthIncrease;
+            System.Console.WriteLine($"You ate! +{healthIncrease} health!");
         }
 
-
+        public void GetHealth()
+        {
+        System.Console.WriteLine($"Health:{health}");
+        }
 
     }

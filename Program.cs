@@ -1,6 +1,5 @@
-﻿Rider test = new Rider("Male", 31,4);
+﻿Rider shane = new Snowboarder("Male", 31,4);
 
-for (int i = 0; i < 1000; i++)
-{
-    test.doTrick();
-}
+shane.GetHealth();
+shane.Eat();
+shane.GetHealth();
