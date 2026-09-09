@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("snowSim")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a04e66af9646f3822ab8642f876aabc1755422a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f5467f56fbdecffe7b83780fed0abf5bf66b974")]
 [assembly: System.Reflection.AssemblyProductAttribute("snowSim")]
 [assembly: System.Reflection.AssemblyTitleAttribute("snowSim")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
