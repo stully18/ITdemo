@@ -5,7 +5,7 @@ shane.Eat();
 shane.GetHealth();
 shane.GetStance();
 shane.SwitchStance();
-shane.GetStance();*/
+shane.GetStance();
 
 System.Console.WriteLine("Welcome to Shane's Resort! Create your Rider!");
 System.Console.Write("Choose your sport! 1. Skier 2. Snowboarder (1 or 2): ");
@@ -23,4 +23,8 @@ else if (sport == 2)
 else
 {
     System.Console.WriteLine("Please input valid number!");
-}
+}*/
+
+
+Skier shane = new Skier(false, "Male", 21, 0);
+shane.doTrick();

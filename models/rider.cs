@@ -7,10 +7,10 @@ abstract class Rider
         public int yearsOfExperience;
         public int healthIncrease = 10;
         protected int health = 100;
-        private int trickDamage = 1;
+        protected int trickDamage = 1;
         private double trickModifier = 1.1;
         public double speed = 0.0;
-        
+
         public Rider(string gender, int age, int experience)
         {
             this.gender = gender;
