@@ -28,3 +28,6 @@ else
 
 Skier shane = new Skier(false, "Male", 21, 0);
 shane.doTrick();
+shane.HasPolls();
+shane.TogglePoles();
+shane.HasPolls();

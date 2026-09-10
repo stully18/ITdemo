@@ -27,7 +27,7 @@ abstract class Rider
             else
             {
                 health -= trickDamage;
-                string message = $"You failed!  You lost {trickDamage} health :()";
+                string message = $"You failed the trick!  You lost {trickDamage} health. Current health {health}";
                 System.Console.WriteLine(message);
             }
         }

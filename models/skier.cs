@@ -1,6 +1,6 @@
 class Skier : Rider
 {   
-    bool usesPoles = true;
+    private bool usesPoles = true;
 
     public Skier(bool usesPoles, string gender, int age, int experience) : base(gender, age, experience)
     {
@@ -20,12 +20,12 @@ class Skier : Rider
             if (usesPoles == true)
             {
                 health -= trickDamage;
-                message = $"You failed!  You lost {trickDamage} health :()";
+                message = $"You failed the trick!  You lost {trickDamage} health. Current health {health}";
             }
             else if (usesPoles == false)
             {
-                health -= trickDamage - 5;
-                message = $"You failed!  You lost {trickDamage + 5} health :()";
+                health -= trickDamage + 5;
+                message = $"You failed!  You lost {trickDamage + 5} health. Current health {health}";
             }
             else
             {
@@ -33,5 +33,28 @@ class Skier : Rider
             }
             System.Console.WriteLine(message);
         }
+    }
+
+    public void TogglePoles()
+    {
+        if (usesPoles == true)
+        {
+            usesPoles = false;
+            System.Console.WriteLine("Now you don't have any polls!");
+        }
+        else if (usesPoles == false)
+        {
+            usesPoles = true;
+            System.Console.WriteLine("You have equipped poles!");
+        }
+        else
+        {
+            System.Console.WriteLine("ERROR!");
+        }
+    }
+
+    public bool HasPolls()
+    {
+        return usesPoles;
     }
 }
