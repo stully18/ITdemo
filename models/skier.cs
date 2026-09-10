@@ -55,6 +55,47 @@ class Skier : Rider
 
     public bool HasPolls()
     {
+        System.Console.WriteLine($"{usesPoles}");
         return usesPoles;
+        
+    }
+
+    public static Skier CreateFromInput()
+    {
+        bool usesPoles = false;
+        int age;
+        int experience;
+        string gender = "";
+        string response = "";
+        
+        System.Console.WriteLine("Lets Build your skier!");
+        System.Console.Write("First Question! Will your Skier have polls? y/n: ");
+        response = Console.ReadLine().ToLower();
+        if (response == "y")
+        {
+            usesPoles = true;
+        }
+        else if (response == "n")
+        {
+            usesPoles = false;
+        }
+        else
+        {
+            System.Console.WriteLine($"{response} is not Valid. Please select y or n!");
+        }
+
+        System.Console.Write("Enter age:  ");
+        response = Console.ReadLine();
+        age = int.Parse(response);
+
+        System.Console.Write("Enter years of Experience:  ");
+        response = Console.ReadLine();
+        experience = int.Parse(response);
+
+        System.Console.Write("Enter Gender:  ");
+        response = Console.ReadLine();
+        gender = response;
+
+        return new Skier(usesPoles, gender, age, experience);
     }
 }
