@@ -46,7 +46,7 @@ class Snowboarder : Rider
         
         while (true)
         {
-            System.Console.Write("First choose your stance: (Goofy or Regular)");
+            System.Console.Write("First choose your stance (Goofy or Regular): ");
             response = Console.ReadLine()?.ToLower();
             if (!string.IsNullOrWhiteSpace(response) && response[0].ToString() == "g")
             {
@@ -111,6 +111,16 @@ class Snowboarder : Rider
 
 
         return new Snowboarder(stance, gender, age, experience);
+    }
+
+    public override void GetStats()
+    {
+        System.Console.WriteLine("");
+        System.Console.WriteLine($"Gender: {gender}");
+        System.Console.WriteLine($"Age: {age}");
+        System.Console.WriteLine($"Experience: {yearsOfExperience} years");
+        System.Console.WriteLine($"Health: {health}");
+        System.Console.WriteLine($"Stance: {stance}");
     }
 
 } 

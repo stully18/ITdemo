@@ -7,7 +7,7 @@ abstract class Rider
         public int yearsOfExperience;
         public int healthIncrease = 10;
         protected int health = 100;
-        protected int trickDamage = 1;
+        protected int trickDamage = 5;
         private double trickModifier = 1.1;
         public double speed = 0.0;
 
@@ -18,6 +18,8 @@ abstract class Rider
             yearsOfExperience = experience;
         }
 
+        public abstract void GetStats();
+
         public virtual void doTrick()
         {
             if (willLand(health) == true)
@@ -26,9 +28,18 @@ abstract class Rider
             }
             else
             {
-                health -= trickDamage;
-                string message = $"You failed the trick!  You lost {trickDamage} health. Current health {health}";
-                System.Console.WriteLine(message);
+                if (trickDamage <= health)
+                {
+                    health -= trickDamage;
+                    string message = $"You failed the trick!  You lost {trickDamage} health. Current health {health}";
+                    System.Console.WriteLine(message);
+                }
+                else
+                {
+                    System.Console.WriteLine("You failed the trick and died!");
+                }
+
+
             }
         }
 

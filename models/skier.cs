@@ -14,7 +14,7 @@ class Skier : Rider
     {
         string message = "";
 
-        if (willLand(10) == true)
+        if (willLand(health) == true)
         {
             System.Console.WriteLine("You landed the trick!");
         }
@@ -74,7 +74,7 @@ class Skier : Rider
         System.Console.WriteLine("Lets Build your skier!");
         while (true)
         {
-        System.Console.Write("First Question! Will your Skier have polls? y/n: ");
+        System.Console.Write("First Question! Will your Skier have poles? y/n: ");
         response = Console.ReadLine()?.ToLower();
         if (!string.IsNullOrWhiteSpace(response) && response == "y")
         {
@@ -138,5 +138,15 @@ class Skier : Rider
         }
 
         return new Skier(usesPoles, gender, age, experience);
+    }
+
+    public override void GetStats()
+    {
+        System.Console.WriteLine("");
+        System.Console.WriteLine($"Gender: {gender}");
+        System.Console.WriteLine($"Age: {age}");
+        System.Console.WriteLine($"Experience: {yearsOfExperience} years");
+        System.Console.WriteLine($"Health: {health}");
+        System.Console.WriteLine($"Has Poles: {usesPoles}");
     }
 }
