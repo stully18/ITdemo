@@ -1,3 +1,6 @@
+using System.Collections.Concurrent;
+using System.Security.Cryptography.X509Certificates;
+
 class Skier : Rider
 {   
     private bool usesPoles = true;
@@ -69,32 +72,70 @@ class Skier : Rider
         string response = "";
         
         System.Console.WriteLine("Lets Build your skier!");
+        while (true)
+        {
         System.Console.Write("First Question! Will your Skier have polls? y/n: ");
-        response = Console.ReadLine().ToLower();
-        if (response == "y")
+        response = Console.ReadLine()?.ToLower();
+        if (!string.IsNullOrWhiteSpace(response) && response == "y")
         {
             usesPoles = true;
+            break;
         }
-        else if (response == "n")
+        else if (!string.IsNullOrWhiteSpace(response) && response == "n")
         {
             usesPoles = false;
+            break;
         }
         else
         {
             System.Console.WriteLine($"{response} is not Valid. Please select y or n!");
         }
+        }
 
-        System.Console.Write("Enter age:  ");
-        response = Console.ReadLine();
-        age = int.Parse(response);
 
-        System.Console.Write("Enter years of Experience:  ");
-        response = Console.ReadLine();
-        experience = int.Parse(response);
+        while (true)
+        {
+            System.Console.Write("Enter age:  ");
+            response = Console.ReadLine();
+            if (int.TryParse(response, out age))
+            {
+                break;
+            }
+            else
+            {
+                System.Console.WriteLine("Error inegers only!");
+            }   
+        }
 
-        System.Console.Write("Enter Gender:  ");
-        response = Console.ReadLine();
-        gender = response;
+
+        while (true)
+        {
+            System.Console.Write("Enter years of Experience:  ");
+            response = Console.ReadLine();
+            if (int.TryParse(response, out experience))
+            {
+                break;
+            }
+            else
+            {
+                System.Console.WriteLine("Enter Integers Only!!");
+            } 
+        }
+
+
+        while (true)
+        {
+            System.Console.Write("Enter Gender:  ");
+            response = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(response)){
+                gender = response;
+                break;
+            }
+            else
+            {
+                System.Console.WriteLine("Please enter a gender!");
+            }
+        }
 
         return new Skier(usesPoles, gender, age, experience);
     }

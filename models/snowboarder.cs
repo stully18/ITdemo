@@ -43,32 +43,72 @@ class Snowboarder : Rider
         string response = "";
         
         System.Console.WriteLine("Lets Build your snowboarder!");
-        System.Console.Write("First choose your stance: (Goofy or Regular)");
-        response = Console.ReadLine().ToLower();
-        if (response == "g")
+        
+        while (true)
         {
-            stance = "Goofy";
-        }
-        else if (response == "r")
-        {
-            stance = "Regular";
-        }
-        else
-        {
-            System.Console.WriteLine($"{response} is not Valid. Please select correct stance!");
+            System.Console.Write("First choose your stance: (Goofy or Regular)");
+            response = Console.ReadLine()?.ToLower();
+            if (!string.IsNullOrWhiteSpace(response) && response[0].ToString() == "g")
+            {
+                stance = "Goofy";
+                break;
+            }
+            else if (!string.IsNullOrWhiteSpace(response) && response[0].ToString() == "r")
+            {
+                stance = "Regular";
+                break;
+            }
+            else
+            {
+                System.Console.WriteLine($"{response} is not Valid. Please select correct stance!");
+            }
         }
 
-        System.Console.Write("Enter age:  ");
-        response = Console.ReadLine();
-        age = int.Parse(response);
+        while (true)
+        {    
+            System.Console.Write("Enter age:  ");
+            response = Console.ReadLine();
+            if (int.TryParse(response, out age))
+            {
+                break;
+            }
+            else
+            {
+                System.Console.WriteLine("Please enter an integer for age!");
+            }
+        }
+        
+        while (true)
+        {
+            System.Console.Write("Enter years of Experience:  ");
+            response = Console.ReadLine();
+            if (int.TryParse(response, out experience))
+            {
+                break;
+            }
+            else
+            {
+                System.Console.WriteLine("Please enter a valid integer!");
+            }
+                        
+        }
 
-        System.Console.Write("Enter years of Experience:  ");
-        response = Console.ReadLine();
-        experience = int.Parse(response);
 
-        System.Console.Write("Enter Gender:  ");
-        response = Console.ReadLine();
-        gender = response;
+        while (true)
+        {
+            System.Console.Write("Enter Gender:  ");
+            response = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(response))
+            {
+                gender = response;
+                break;
+            }
+            else
+            {
+                System.Console.WriteLine("Please enter a valid string for gender!");
+            }
+        }
+
 
         return new Snowboarder(stance, gender, age, experience);
     }
